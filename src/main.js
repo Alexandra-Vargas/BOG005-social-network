@@ -3,6 +3,8 @@ import { showLogin } from "./Componentes/login.js";
 import { showRegister } from "./Componentes/Register.js";
 import { showWall } from "./Componentes/Wall.js";
 
+//Rutas para poder pasar de una vista a otra y conectar al HTML
+
 const root = document.getElementById("root");
 
 const routes = {
@@ -25,7 +27,7 @@ window.onpopstate = () => {
   while (root.firstChild) {
     root.removeChild(root.firstChild);
   }
-  // root.append(component());
+
   root.appendChild(routes[window.location.pathname]());
 };
 

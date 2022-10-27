@@ -13,8 +13,7 @@
     z-index: 0;
 }
 
- .encabezado {
-    
+ .encabezado {    
     position: absolute;
     top: -10px;
     margin-left: 37.5%;
@@ -52,8 +51,7 @@
     position: absolute;
     align-items: center;
     margin-left: 37.5%;
-    margin-top: -15%;
-    
+    margin-top: -15%;    
 }
 
 .buttonLoginW {
@@ -167,6 +165,7 @@
     background-size: cover;
     z-index: 0;
 }
+
 h1 { /*  Titulo: Crear una cuenta  */
     position: absolute;
     width: 360px;
@@ -181,7 +180,6 @@ h1 { /*  Titulo: Crear una cuenta  */
     line-height: 40px;
     display: flex;
     align-items: center;
-
 }
 
 .fraseRegister{
@@ -245,8 +243,7 @@ h1 { /*  Titulo: Crear una cuenta  */
 }
 
 input::placeholder { /* email */
-    color: #ffffffc4;
-    
+    color: #ffffffc4;    
 }
 
 .botonRegister{ /*--- boton continuar (Register) --- */
@@ -322,8 +319,7 @@ input::placeholder { /* email */
 
 /* ------------------------- WALL ----- */
 
-.containerWall {
-   
+.containerWall {   
     position: absolute;
     top: 0px;
     left: 0px;
@@ -342,8 +338,7 @@ input::placeholder { /* email */
     margin-top: 0.5%;
 }
 
-#cerrar {
-  
+#cerrar {  
     width: 100px;
     height: 25px;
     background: linear-gradient(0deg, #ffffff, #ffffff);
@@ -351,42 +346,30 @@ input::placeholder { /* email */
     border-radius: 50px;
     font-family: 'Spartan';
     font-style: normal;
-    font-weight: 400;
+    font-weight: 500;
     font-size: 10px;
     line-height: 17px;
     text-align: center;
-    color: #4E4E4E;
-   
-
+    color: #000000;
+    margin: 2% 2% 0% 0%;
 }
 
-
-
-.inicio {
-    position: absolute;
-    width: 184px;
-    height: 15px;
-    left: 34px;
-    top: 19px;
-    font-family: 'Spartan';
-    font-style: normal;
-    font-weight: 800;
-    font-size: 17px;
-    line-height: 20px;
-  
-
-    display: flex;
-    align-items: center;
-
-    color: #FFFFFF;
+#logoWall{
+    background-image: url(./Componentes/imagesWall/imageLogoWall.png);
+    background-repeat: no-repeat;    
+    border: none;
+    width: 150px;
+    height: 80px;
+    background-color: transparent;
+    margin-left: 13%;
+    margin-top: -3%;
 }
 
-
-#imagenPerfil {
+.imagenPerfil {
     position: absolute;
     display: flex;
     justify-content: flex-start;
-    
+    margin: 20px 3% 20px 30px;
     width: 32px;
     height: 32px;
     background-image: url(./Componentes/imagesWall/usuario.png);
@@ -394,31 +377,34 @@ input::placeholder { /* email */
     background-repeat: no-repeat;    
 }
 
-textarea {
-    /* display: flex;
-    flex-direction: column;
-    justify-content: flex-end; */
-    width: 60%;
-    height: 30%;
+.task-form{
+    margin-left: 5%;    
+}
+
+textarea {      
     font-family: 'spartan';
     background: #ffffff00;
-    margin: 10% 10% 10% 10%;
+    margin: 3% 10% 3% 10%;
     text-align: justify;
-    color: #ffffff;
-    font-family: 'Spectral';
+    color: #ffffff;    
     font-style: normal;
     font-weight: 400;
-    font-size: 12px;
-    line-height: 30px;
-    
-    
+    font-size: 15px;
+    line-height: 25px;
+    max-width: 70%;
+    min-width: 70%;
+    min-height: 30%;
+    max-height: 30%;    
+    border-width: 1px;
+    border-color: #ffffff; 
+    padding: 15px;    
 }
 
 textarea::placeholder { /* ---Que quieres publicar? --- */
     margin-top: 20px;
     color: #ffffff;
     font-family: 'spartan';
-        
+    font-size: 15px;        
 }
 
 .botonPublicar {  /*--- boton publicar --- */
@@ -426,8 +412,8 @@ textarea::placeholder { /* ---Que quieres publicar? --- */
     position: absolute;
     width: 87px;
     height: 32px;
-    left: 150px;
-    top: 200px;
+    right: 17%;
+    top: 247px;
     background: linear-gradient(90deg, rgba(145, 4, 255, 0.93) 0%, rgba(255, 0, 184, 0.93) 55.63%);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 50px;
@@ -437,8 +423,11 @@ textarea::placeholder { /* ---Que quieres publicar? --- */
     font-size: 15px;
     line-height: 17px;
     text-align: center;
-    color: #FFFFFF;
+    color: #FFFFFF;  
+    display: flex;
+    align-items: center;    
 }
+
 
 #containerPosts{
     justify-content: flex-end;
@@ -462,27 +451,22 @@ textarea::placeholder { /* ---Que quieres publicar? --- */
     height: fit-content;
     padding: 0% 5% 5% 5%;
     border-radius: 5px;
-
 }
 
-#textPost{
-    
+#textPost{    
     align-items: center;
     flex-direction: column;
     flex: content;
     display: inline-block;
-
-
 }
 
 #textoPost {
-
     background: #DAD9FF;
     width:fit-content;
     height: fit-content;
-    padding: 5% 5% 5% 5%;
+    padding: 20px;
     border-radius: 5px;
-    margin: 1% 10% 1% 5%;
+    margin: 5px 15px 5px 15px;
     text-align: justify;
     display: flex;
     flex: auto;
@@ -492,19 +476,15 @@ textarea::placeholder { /* ---Que quieres publicar? --- */
     font-size: 20px;
     line-height: 30px;
     color: #410831;
-
 }
 
 
-#buttons {
-  
+#buttons {  
     align-items: center;
     flex-direction: column;
     flex: content;
     display: inline-block;
-    margin-left: 10%;
-   
-
+    margin-left: 5%;
 }
 
 .botonFavorito {    
@@ -513,7 +493,12 @@ textarea::placeholder { /* ---Que quieres publicar? --- */
     border: none;
     width: 87px;
     height: 32px;
-    background-color: transparent;   
+    background-color: transparent;  
+    font-family: 'Spartan';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+    color: #ffffff;   
 }
 
 .botonEditar { 
@@ -522,7 +507,7 @@ textarea::placeholder { /* ---Que quieres publicar? --- */
     border: none;
     width: 87px;
     height: 32px;
-    background-color: transparent
+    background-color: transparent;    
 }
 
 .botonEliminar { 
@@ -531,5 +516,11 @@ textarea::placeholder { /* ---Que quieres publicar? --- */
     border: none;
     width: 87px;
     height: 32px;
-    background-color: transparent
+    background-color: transparent;    
+}
+
+#division{
+    border: 1px solid rgba(255, 255, 255, 0.54);
+    width: 100%;
+    margin-bottom: 20px;
 }

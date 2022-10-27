@@ -16,19 +16,15 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 
-console.log("configuración realizada: ", app);
-
 export const auth = getAuth(app);
 export const getCurrentUser = () => getAuth().currentUser;
 export { onAuthStateChanged };
 
 onAuthStateChanged(auth, (user) => {
-  console.log("USUARIO: ", user);
   if (user == null) {
     onNavigate("/");
   } else {
-    console.log(user.uid);
-   onNavigate("/wall");
+    onNavigate("/wall");
   }
 });
 //Función para registrar usuario con Firebase
@@ -38,12 +34,11 @@ export const registrar = (email, password) => {
     .then((userCredential) => {
       // Signed in
       const user = userCredential.user;
-      console.log("registro correcto");
     })
     .catch((error) => {
       const errorCode = error.code;
       const errorMessage = error.message;
-      console.log("error: ", errorCode, errorMessage);
+      alert("Confirma los datos ingresados");
     });
 };
 
@@ -53,13 +48,12 @@ export const ingresar = (email, password) => {
   signInWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
       const user = userCredential.user;
-      console.log("ingreso correcto");
       onNavigate("/wall");
     })
     .catch((error) => {
       const errorCode = error.code;
       const errorMessage = error.message;
-      console.log("error:", errorCode, errorMessage);
+      alert("Ingresa correo y contraseña");
     });
 };
 
@@ -79,8 +73,7 @@ export const ingresoGoogle = () => {
       const errorMessage = error.message;
       const email = error.customData.email;
       const credential = GoogleAuthProvider.credentialFromError(error);
-      console.log("error Google:", errorCode, errorMessage, email, credential);
-      // ...
+      alert("Error al ingresar los datos");
     });
 };
 

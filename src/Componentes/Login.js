@@ -1,6 +1,8 @@
 import { onNavigate } from "../main.js";
 import { ingresar } from "../lib/firebase.js";
 
+//Mostrar página
+
 export function showLogin() {
   const login = `
 <section class='containerLogin'>
@@ -16,6 +18,9 @@ export function showLogin() {
   const inputEmail = nodeLogin.querySelector(".email");
   const inputPassword = nodeLogin.querySelector(".password");
   const buttonIngresar = nodeLogin.querySelector(".botonLogin");
+
+  //Funcion para ingresar con correo
+
   buttonIngresar.addEventListener("click", () => {
     ingresar(inputEmail.value, inputPassword.value);
   });
