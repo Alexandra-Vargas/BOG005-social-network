@@ -1,4 +1,3 @@
-import { onNavigate } from "../main.js";
 import { ingresar } from "../lib/firebase.js";
 
 //Mostrar página
