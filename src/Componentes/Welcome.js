@@ -1,7 +1,7 @@
 import { onNavigate } from "../main.js";
 import { ingresoGoogle } from "../lib/firebase.js";
 
-//Funcion para mostrar la página
+// Funcion para mostrar la página
 
 export function showWelcome() {
   const welcome = ` 
@@ -28,7 +28,7 @@ export function showWelcome() {
   const buttonRegister = nodeWelcome.querySelector("#buttonRegisterWC");
   const botonGoogle = nodeWelcome.querySelector("#ingresoGoogle");
 
-  //Funciones para dar las rutas a los botones
+  // Funciones para dar las rutas a los botones
 
   buttonLogin.addEventListener("click", () => {
     onNavigate("/login");

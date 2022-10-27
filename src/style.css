@@ -410,7 +410,7 @@ textarea::placeholder { /* ---Que quieres publicar? --- */
 .botonPublicar {  /*--- boton publicar --- */
     box-sizing: border-box;
     position: absolute;
-    width: 87px;
+    width: 100px;
     height: 32px;
     right: 17%;
     top: 247px;
